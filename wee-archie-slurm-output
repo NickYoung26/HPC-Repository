@@ -1,0 +1,144 @@
+Loading mpi version 2021.6.0
+16
+Good Code Integral 3.1415926536
+
+ Performance counter stats for 'mpirun -np 16 ./goodcodecopy.py':
+
+       83092906113      cycles:u                                                              
+      241204545072      instructions:u                   #    2.90  insn per cycle            
+           5690844      cache-misses:u                                                        
+
+       2.079163616 seconds time elapsed
+
+      29.203508000 seconds user
+       1.938520000 seconds sys
+
+
+Bad Code Integral 3.1415926536
+
+ Performance counter stats for 'mpirun -np 16 ./badcode.py':
+
+    17681434739783      cycles:u                                                              
+    42615658132437      instructions:u                   #    2.41  insn per cycle            
+         512518292      cache-misses:u                                                        
+
+     423.737314469 seconds time elapsed
+
+    6393.202622000 seconds user
+     366.221773000 seconds sys
+
+
+8
+Good Code Integral 3.1415926536
+
+ Performance counter stats for 'mpirun -np 8 ./goodcodecopy.py':
+
+       79287231426      cycles:u                                                              
+      231771508160      instructions:u                   #    2.92  insn per cycle            
+           2454443      cache-misses:u                                                        
+
+       3.156243618 seconds time elapsed
+
+      23.747802000 seconds user
+       0.688413000 seconds sys
+
+
+Bad Code Integral 3.1415926536
+
+ Performance counter stats for 'mpirun -np 8 ./badcode.py':
+
+     7875270177450      cycles:u                                                              
+    18435982172265      instructions:u                   #    2.34  insn per cycle            
+         632307141      cache-misses:u                                                        
+
+     319.768049130 seconds time elapsed
+
+    2421.685333000 seconds user
+     129.516842000 seconds sys
+
+
+4
+Good Code Integral 3.1415926536
+
+ Performance counter stats for 'mpirun -np 4 ./goodcodecopy.py':
+
+       81741044023      cycles:u                                                              
+      240217576220      instructions:u                   #    2.94  insn per cycle            
+           1047560      cache-misses:u                                                        
+
+       6.126296807 seconds time elapsed
+
+      23.663376000 seconds user
+       0.403019000 seconds sys
+
+
+Bad Code Integral 3.1415926536
+
+ Performance counter stats for 'mpirun -np 4 ./badcode.py':
+
+     3592374723164      cycles:u                                                              
+     8856344295602      instructions:u                   #    2.47  insn per cycle            
+         340031749      cache-misses:u                                                        
+
+     281.534794452 seconds time elapsed
+
+    1068.142476000 seconds user
+      54.989641000 seconds sys
+
+
+2
+Good Code Integral 3.1415926536
+
+ Performance counter stats for 'mpirun -np 2 ./goodcodecopy.py':
+
+       80026680727      cycles:u                                                              
+      234309630717      instructions:u                   #    2.93  insn per cycle            
+            610696      cache-misses:u                                                        
+
+      11.176526583 seconds time elapsed
+
+      21.938986000 seconds user
+       0.227979000 seconds sys
+
+
+Bad Code Integral 3.1415926536
+
+ Performance counter stats for 'mpirun -np 2 ./badcode.py':
+
+     1220801280040      cycles:u                                                              
+     2828521577806      instructions:u                   #    2.32  insn per cycle            
+            657024      cache-misses:u                                                        
+
+     175.726747983 seconds time elapsed
+
+     339.794167000 seconds user
+      10.694010000 seconds sys
+
+
+1
+Good Code Integral 3.1415926536
+
+ Performance counter stats for 'mpirun -np 1 ./goodcodecopy.py':
+
+       76689275975      cycles:u                                                              
+      224617337020      instructions:u                   #    2.93  insn per cycle            
+            315534      cache-misses:u                                                        
+
+      21.045610943 seconds time elapsed
+
+      20.855688000 seconds user
+       0.145976000 seconds sys
+
+
+Bad Code Integral 3.1415926536
+
+ Performance counter stats for 'mpirun -np 1 ./badcode.py':
+
+      141254175957      cycles:u                                                              
+      418817812696      instructions:u                   #    2.96  insn per cycle            
+            338242      cache-misses:u                                                        
+
+      38.595170514 seconds time elapsed
+
+      38.377328000 seconds user
+       0.138942000 seconds sys

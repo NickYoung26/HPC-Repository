@@ -1,0 +1,35 @@
+#!/bin/bash
+#
+# Propagate environment variables to the compute node
+#SBATCH --export=ALL
+# Run in the standard partition (queue)
+#SBATCH --partition=teaching
+# Specify project account
+#SBATCH --account=teaching
+# Distribute processes in round-robin fashion, probs cap
+#SBATCH --distribution=block:block
+# No of cores required (max. of 16, 4GB RAM per core)
+#SBATCH --ntasks=16
+# Runtime (hard, HH:MM:SS)
+#SBATCH --time=24:00:00
+# Job name
+#SBATCH --job-name=Definite_Integral_Compared
+# Output file
+#SBATCH --output=slurm-%j.out
+# Modify the line below to run your program
+
+module load mpi
+
+# Run once to ensure time taken to load modules is not included in the recorded times for scripts within the for loop.
+mpirun -np 1 ./goodcodecopy.py >/dev/null
+
+# Loop across multiple cores.
+for N in 16 8 4 2 1; do
+
+	echo $N
+
+    perf stat -e cycles,instructions,cache-misses mpirun -np $N ./goodcode.py
+
+    perf stat -e cycles,instructions,cache-misses mpirun -np $N ./badcode.py
+
+done
