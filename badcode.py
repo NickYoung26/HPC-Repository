@@ -39,7 +39,7 @@ if comm.Get_rank() == 0:
     # mid-point rule
     x = (i+0.5) * delta
 
-	# this loop is pure shit and means we cant summate calculated values to find the final value of the integral. This slows computation further.
+	# this loop means we cant summate calculated values to find the final value of the integral. This slows computation further.
 
     if j == 0:
       # so do this locally using the leader machine
